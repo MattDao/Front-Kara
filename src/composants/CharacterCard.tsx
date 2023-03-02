@@ -10,7 +10,7 @@ export const CharacterCard = ({ charaAffich }: CardCharaProps) => {
           <CharaButton charaAffich={charaAffich} />
         </div>
         <img
-          src="./assets/Heros1.jpg"
+          src="/assets/Heros1.jpg"
           className="card-img-top custom-img"
           alt="heros"
           style={{
@@ -21,7 +21,17 @@ export const CharacterCard = ({ charaAffich }: CardCharaProps) => {
           }}
         />
         <div className="card-body">
-          <a href={`/Hero/${charaAffich.id}`} className="btn btn-primary" style={{display: "block", margin: "auto",backgroundColor:"#15134d", color:"white",border:"none" }}>
+          <a
+            href={`/Hero/${charaAffich.id}`}
+            className="btn btn-primary"
+            style={{
+              display: "block",
+              margin: "auto",
+              backgroundColor: "#15134d",
+              color: "white",
+              border: "none",
+            }}
+          >
             {charaAffich.name}
           </a>
         </div>

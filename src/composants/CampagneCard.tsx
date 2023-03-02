@@ -10,7 +10,7 @@ export const CampagneCard = ({ campAffich }: CardCampProps) => {
           <CampButton campAffich={campAffich} />
         </div>
         <img
-          src="./assets/Adventure.jpg"
+          src="/assets/Adventure.jpg"
           className="card-img-top custom-img"
           alt="heros"
           style={{
@@ -24,7 +24,13 @@ export const CampagneCard = ({ campAffich }: CardCampProps) => {
           <a
             href={`/Adventure/${campAffich.id}`}
             className="btn btn-primary"
-            style={{ display: "block", margin: "auto",backgroundColor:"#15134d", color:"white",border:"none"}}
+            style={{
+              display: "block",
+              margin: "auto",
+              backgroundColor: "#15134d",
+              color: "white",
+              border: "none",
+            }}
           >
             {campAffich.name}
           </a>

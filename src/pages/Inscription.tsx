@@ -66,7 +66,7 @@ export const Inscription = () => {
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src="./assets/ConnexionPen.jpg"
+              src="/assets/ConnexionPen.jpg"
               className="img-fluid rounded-start"
               alt="Connexion"
             />
@@ -126,7 +126,15 @@ export const Inscription = () => {
                   />
                 </div>
                 <div className="mb-3 form-check"></div>
-                <button type="submit" className="btn btn-primary"style={{backgroundColor:"#15134d", color:"white",border:"none"}}>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
                   Inscription
                 </button>
               </form>

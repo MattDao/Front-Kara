@@ -10,7 +10,7 @@ export const Home = () => {
           <div className="col-lg-6 mb-3 mb-lg-0">
             <div className="card" style={{ width: "100%" }}>
               <img
-                src="./assets/HomeUSer.jpg"
+                src="/assets/HomeUSer.jpg"
                 className="card-img-top"
                 alt="HomeUser"
               />
@@ -19,10 +19,26 @@ export const Home = () => {
                 <p className="card-text">
                   Connectez vous ou inscrivez vous et rejoignez la partie !.
                 </p>
-                <a href="/Connexion" className="btn btn-primary mx-2"style={{backgroundColor:"#15134d", color:"white",border:"none"}}>
+                <a
+                  href="/Connexion"
+                  className="btn btn-primary mx-2"
+                  style={{
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
                   Connexion
                 </a>
-                <a href="/Inscription" className="btn btn-primary mx-2"style={{backgroundColor:"#15134d", color:"white",border:"none"}}>
+                <a
+                  href="/Inscription"
+                  className="btn btn-primary mx-2"
+                  style={{
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
                   Inscription
                 </a>
               </div>
@@ -31,7 +47,7 @@ export const Home = () => {
           <div className="col-lg-6">
             <div className="card" style={{ width: "100%" }}>
               <img
-                src="./assets/HomeMj.jpg"
+                src="/assets/HomeMj.jpg"
                 className="card-img-top"
                 alt="HomeMj"
               />
@@ -41,10 +57,26 @@ export const Home = () => {
                   Connectez vous ou inscrivez vous et créez vos propres parties
                   !.
                 </p>
-                <a href="/Connexion" className="btn btn-primary mx-2"style={{backgroundColor:"#15134d", color:"white",border:"none"}}>
+                <a
+                  href="/Connexion"
+                  className="btn btn-primary mx-2"
+                  style={{
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
                   Connexion
                 </a>
-                <a href="/Inscription" className="btn btn-primary mx-2"style={{backgroundColor:"#15134d", color:"white",border:"none"}}>
+                <a
+                  href="/Inscription"
+                  className="btn btn-primary mx-2"
+                  style={{
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
                   Inscription
                 </a>
               </div>

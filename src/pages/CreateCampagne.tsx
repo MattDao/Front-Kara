@@ -37,8 +37,15 @@ export const CreateCampagne = () => {
     <div>
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid"style={{backgroundColor:"#15134d", color:"white"}}>
-            <a className="navbar-brand" href="/Campagnes"style={{color:"white"}}>
+          <div
+            className="container-fluid"
+            style={{ backgroundColor: "#15134d", color: "white" }}
+          >
+            <a
+              className="navbar-brand"
+              href="/Campagnes"
+              style={{ color: "white" }}
+            >
               Kara
             </a>
             <button
@@ -59,7 +66,7 @@ export const CreateCampagne = () => {
                     className="nav-link active"
                     aria-current="page"
                     href="/Campagnes"
-                    style={{color:"white"}}
+                    style={{ color: "white" }}
                   >
                     Vos campagnes
                   </a>
@@ -74,7 +81,7 @@ export const CreateCampagne = () => {
           <div className="card mt-5 m-5">
             <div className="card-body">
               <img
-                src="./assets/CreaCamp.jpg"
+                src="/assets/CreaCamp.jpg"
                 className="img-fluid"
                 alt="creation"
                 style={{
@@ -122,7 +129,6 @@ export const CreateCampagne = () => {
                     Carnet d'aventure
                   </label>
                   <textarea
-                    
                     className="form-control"
                     placeholder="Carnet"
                     ref={bodyElement}
@@ -135,7 +141,14 @@ export const CreateCampagne = () => {
                 <button
                   type="submit"
                   className="btn btn-primary mt-3"
-                  style={{ width: "1000px", display: "block", margin: "auto",backgroundColor:"#15134d", color:"white",border:"none"}}
+                  style={{
+                    width: "1000px",
+                    display: "block",
+                    margin: "auto",
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
                 >
                   Valider
                 </button>

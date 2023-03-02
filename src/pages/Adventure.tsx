@@ -9,7 +9,7 @@ export const Adventure = () => {
   const [camp, setCamp] = useState<CampProps>();
   const navigate = useNavigate();
   const bodyElement = useRef<HTMLTextAreaElement>(null);
-  const [body, setBody] = useState<string>(camp?.body ?? '');
+  const [body, setBody] = useState<string>(camp?.body ?? "");
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -29,12 +29,12 @@ export const Adventure = () => {
   }, [id]);
 
   useEffect(() => {
-    setBody(camp?.body ?? '');
+    setBody(camp?.body ?? "");
   }, [camp]);
-  
-const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-  setBody(event.target.value)
-}
+
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setBody(event.target.value);
+  };
 
   const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,14 +58,20 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         alert("Fin de l'aventure... Pour le moment.");
         navigate(`/campagnes`);
       });
-    
   };
 
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid"style={{backgroundColor:"#15134d", color:"white"}}>
-          <a className="navbar-brand" href="/Campagnes"style={{color:"white"}}>
+        <div
+          className="container-fluid"
+          style={{ backgroundColor: "#15134d", color: "white" }}
+        >
+          <a
+            className="navbar-brand"
+            href="/Campagnes"
+            style={{ color: "white" }}
+          >
             Kara
           </a>
           <button
@@ -86,7 +92,7 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
                   className="nav-link active"
                   aria-current="page"
                   href="/CreateCampagne"
-                  style={{color:"white"}}
+                  style={{ color: "white" }}
                 >
                   Créer votre campagne
                 </a>
@@ -101,7 +107,7 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
           <div className="card mt-5 m-5">
             <div className="card-body">
               <img
-                src="./assets/Adventure.jpg"
+                src="/assets/Adventure.jpg"
                 className="img-fluid"
                 alt="adventure"
                 style={{
@@ -126,7 +132,7 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
                   </label>
                   <p> {camp?.style}</p>
                 </div>
-                <div className="col-md-10 mt-2"style={{width:"100%"}}>
+                <div className="col-md-10 mt-2" style={{ width: "100%" }}>
                   <label
                     className="labels"
                     style={{ color: "black", fontWeight: "bold" }}
@@ -135,8 +141,9 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
                   </label>
                   <textarea
                     className="form-control"
-                    style={{width:"100%"}}
-                    value={body} onChange={handleChange}
+                    style={{ width: "100%" }}
+                    value={body}
+                    onChange={handleChange}
                     ref={bodyElement}
                   />
                 </div>
@@ -144,7 +151,14 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
                 <button
                   type="submit"
                   className="btn btn-primary mt-3"
-                  style={{ width: "80%", display: "block", margin: "auto",backgroundColor:"#15134d", color:"white",border:"none" }}
+                  style={{
+                    width: "80%",
+                    display: "block",
+                    margin: "auto",
+                    backgroundColor: "#15134d",
+                    color: "white",
+                    border: "none",
+                  }}
                 >
                   Valider
                 </button>
@@ -154,9 +168,8 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         </form>
       </div>
       <div className="card mt-5 m-5">
-            
-     <DicesCard numDice={0} numFaces={0}/>
-    </div>
+        <DicesCard numDice={0} numFaces={0} />
+      </div>
     </div>
   );
 };

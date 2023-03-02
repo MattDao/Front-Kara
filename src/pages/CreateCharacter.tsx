@@ -94,8 +94,11 @@ export const CreateCharacter = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid"style={{backgroundColor:"#15134d", color:"white"}}>
-          <a className="navbar-brand" href="/"style={{color:"white"}}>
+        <div
+          className="container-fluid"
+          style={{ backgroundColor: "#15134d", color: "white" }}
+        >
+          <a className="navbar-brand" href="/" style={{ color: "white" }}>
             Kara
           </a>
           <button
@@ -116,7 +119,7 @@ export const CreateCharacter = () => {
                   className="nav-link active"
                   aria-current="page"
                   href="/Characters"
-                  style={{color:"white"}}
+                  style={{ color: "white" }}
                 >
                   Vos héros
                 </a>
@@ -131,7 +134,7 @@ export const CreateCharacter = () => {
           <div className="card mt-5 m-5">
             <div className="card-body">
               <img
-                src="./assets/Creachara.jpg"
+                src="/assets/Creachara.jpg"
                 className="img-fluid"
                 alt="creation"
                 style={{
