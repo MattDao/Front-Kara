@@ -117,8 +117,11 @@ export const CreateCampagne = () => {
                     Style
                   </label>
                   <select className="form-select" ref={styleElement}>
-                    <option value="fantasy">Fantasy</option>
-                    <option value="science fiction">Science-fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Science fiction">Science-fiction</option>
+                    <option value="Historique">Science-fiction</option>
+                    <option value="Horreur">Science-fiction</option>
+                    <option value="Post-apocalyptique">Science-fiction</option>
                   </select>
                 </div>
                 <div className="col-md-10 mt-2">
