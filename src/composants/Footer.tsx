@@ -41,7 +41,7 @@ export const Footer = () => {
               </section>
             </div>
             <div className="text-center p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
-              &copy; 2023 Matthieu.daoulas@sncf.fr
+              &copy; 2023 Matthieu daoulas
             </div>
           </footer>
         </div>
