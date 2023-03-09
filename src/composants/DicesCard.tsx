@@ -1,22 +1,26 @@
 import React, { useState } from "react";
-import { DiceProps } from "../Interfaces/Interface";
+import { DiceProps } from "../Interfaces/Interface"; // import de l'interface utilisée pour les props
 
 export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
-  const [results, setResults] = useState<number[]>([]);
-  const [selectedNumDice, setSelectedNumDice] = useState(numDice);
-  const [selectedNumFaces, setSelectedNumFaces] = useState(numFaces);
+  // création d'un composant DicesCard avec les props numDice et numFaces
+  const [results, setResults] = useState<number[]>([]); // création d'un état initial pour les résultats des dés
+  const [selectedNumDice, setSelectedNumDice] = useState(numDice); // création d'un état initial pour le nombre de dés sélectionné
+  const [selectedNumFaces, setSelectedNumFaces] = useState(numFaces); // création d'un état initial pour le nombre de faces sélectionné
 
   const rollDice = () => {
+    // fonction pour lancer les dés
     const newResults = Array.from(
+      // création d'un nouveau tableau avec une longueur égale au nombre de dés sélectionné
       { length: selectedNumDice },
-      () => Math.floor(Math.random() * selectedNumFaces) + 1
+      () => Math.floor(Math.random() * selectedNumFaces) + 1 // génération d'un nombre aléatoire compris entre 1 et le nombre de faces sélectionné pour chaque dé
     );
-    setResults(newResults);
+    setResults(newResults); // mise à jour de l'état des résultats des dés avec le nouveau tableau généré
   };
 
   return (
     <div className="card-body text-center">
       <div className="row">
+        {/* Sélection du nombre de dés */}
         <div className="col-md-6 mt-3 mb-2">
           <label
             htmlFor="numberdices"
@@ -36,6 +40,7 @@ export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
             <option value="4">4</option>
           </select>
         </div>
+        {/* Sélection du nombre de faces */}
         <div className="col-md-6 mt-3 mb-2">
           <label
             htmlFor="numberfaces"
@@ -56,6 +61,7 @@ export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
           </select>
         </div>
       </div>
+      {/* Bouton de lancement du lancer de dés */}
       <div className="row mt-3 mb-2">
         <div className="col-md-0">
           <button
@@ -72,6 +78,7 @@ export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
             Lancer
           </button>
         </div>
+        {/* Affichage des résultats des lancers de dés */}
         {results.length > 0 && (
           <div className="col-md-0 mt-2">
             <label
@@ -82,8 +89,10 @@ export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
               Résultats
             </label>
             <p className="form-control" id="results">
+              {/* Affichage de chaque résultat individuel */}
               {results.map((result) => `${result} `)}
-              (total: {results.reduce((acc, curr) => acc + curr)})
+              {/* Affichage du total des résultats */}
+              (total: {results.reduce((fd, nd) => fd + nd)})
             </p>
           </div>
         )}
@@ -91,3 +100,4 @@ export const DicesCard = ({ numDice, numFaces }: DiceProps) => {
     </div>
   );
 };
+

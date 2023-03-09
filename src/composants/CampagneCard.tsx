@@ -1,4 +1,3 @@
-import React from "react";
 import { CardCampProps } from "../Interfaces/Interface";
 import { CampButton } from "./CampButton";
 
