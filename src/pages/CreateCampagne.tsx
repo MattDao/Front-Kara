@@ -3,16 +3,22 @@ import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const CreateCampagne = () => {
+  // Importation de la fonction navigate depuis le hook useNavigate
   const navigate = useNavigate();
+
+  // Définition de trois références à des éléments HTML pour récupérer leur valeur ultérieurement
   const nameElement = useRef<HTMLInputElement>(null);
   const styleElement = useRef<HTMLSelectElement>(null);
   const bodyElement = useRef<HTMLTextAreaElement>(null);
 
+  // Définition d'une fonction de soumission de formulaire qui sera appelée lors de la soumission du formulaire
   const handleSubmitForm = (event: React.SyntheticEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    event.preventDefault(); // Empêche le comportement par défaut du navigateur lors de la soumission du formulaire
 
+    // Récupération du token stocké dans localStorage
     const token = localStorage.getItem("token");
 
+    // Envoi d'une requête POST à l'API avec les données saisies par l'utilisateur
     axios
       .post(
         "http://localhost:8080/api/campagnes",
@@ -23,14 +29,14 @@ export const CreateCampagne = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`, // Ajout du token dans les en-têtes de la requête
           },
         }
       )
       .then((response: AxiosResponse) => {
-        console.log("response", response.data);
-        alert("Que l'aventure commence !");
-        navigate(`/adventure/${response.data.id}`);
+        console.log("response", response.data); // Affichage de la réponse de l'API dans la console
+        alert("Que l'aventure commence !"); // Affichage d'une alerte pour informer l'utilisateur que la création de la campagne a réussi
+        navigate(`/adventure/${response.data.id}`); // Redirection de l'utilisateur vers la page de la campagne nouvellement créée
       });
   };
   return (
@@ -119,9 +125,11 @@ export const CreateCampagne = () => {
                   <select className="form-select" ref={styleElement}>
                     <option value="Fantasy">Fantasy</option>
                     <option value="Science fiction">Science-fiction</option>
-                    <option value="Historique">Science-fiction</option>
-                    <option value="Horreur">Science-fiction</option>
-                    <option value="Post-apocalyptique">Science-fiction</option>
+                    <option value="Historique">Historique</option>
+                    <option value="Horreur">Horreur</option>
+                    <option value="Post-apocalyptique">
+                      Post-apocalyptique
+                    </option>
                   </select>
                 </div>
                 <div className="col-md-10 mt-2">

@@ -124,7 +124,7 @@ export const Adventure = () => {
               <img
                 src="/assets/Adventure.jpg"
                 className="img-fluid"
-                alt="adventure"
+                alt="illustration aventure"
                 style={{
                   display: "block",
                   width: "100%",

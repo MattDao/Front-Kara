@@ -11,7 +11,7 @@ export const Connexion = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmitForm = async (e: FormEvent) => {
+  const handleSubmitForm = (e: FormEvent) => {
     console.log("handleSubmitForm");
     e.preventDefault();
     console.log(emailElement.current?.value);

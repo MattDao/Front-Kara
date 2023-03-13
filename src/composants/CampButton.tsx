@@ -28,21 +28,18 @@ export const CampButton = ({ campAffich }: CampButtonProps) => {
   };
 
   return (
-    
-      <div className="btn-group">
-        <button
-          className="btn btn-secondary btn-sm dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          style={{ backgroundColor: "#15134d", color: "white", border: "none" }}
-        >
-          ...
-        </button>
-        <ul className="dropdown-menu" onClick={handleClickForm}>
-          supprimer
-        </ul>
-      </div>
-    
+    <div className="btn-group" style={{ width: "100%" }}>
+      <button
+        className="btn btn-secondary btn-sm dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style={{ backgroundColor: "#15134d", color: "white", border: "none" }}
+      >
+      </button>
+      <ul className="dropdown-menu" onClick={handleClickForm}>
+        supprimer
+      </ul>
+    </div>
   );
 };
